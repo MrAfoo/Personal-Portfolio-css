@@ -1,43 +1,39 @@
-
 import React from 'react';
+import resImage from './res.png'
 
 const Projects = () => {
-  const projects = [
-    {
-      title: "Project One",
-      description: "A brief description of project one.",
-      image: "/path/to/image1.jpg"
-    },
-    {
-      title: "Project Two",
-      description: "A brief description of project two.",
-      image: "/path/to/image2.jpg"
-    },
-    {
-      title: "Project Three",
-      description: "A brief description of project three.",
-      image: "/path/to/image3.jpg"
-    },
-  ];
+    return (
+        <div className="p-6 bg-gray-100 text-gray-900">
+            <h2 className="text-3xl font-semibold text-center mb-6">My Projects</h2>
+            <div className="space-y-8">
+                <div className="bg-white shadow-lg rounded-md p-4 flex flex-col md:flex-row items-center hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                    <img 
+                        src={resImage} 
+                        alt="Project 1 Preview" 
+                        className="w-full md:w-1/3 h-auto rounded-md mb-4 md:mb-0 md:mr-6 object-cover"
+                    />
+                    <div className="flex flex-col">
+                        <h3 className="text-2xl font-semibold">Dynamic Resume Builder</h3>
+                        <p className="mt-2">Created Dynamic Resume Builder with React JS, Html and CSS.You can Download,Edit and Share you generated resume.</p>
+                        <a
+                            href="https://your-project1-url.vercel.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-blue-600 hover:underline mt-4"
+                        >
+                            View Project
+                        </a>
+                    </div>
+                </div>
 
-  return (
-    <section id="projects" className="py-20 bg-gray-100">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold mb-8">My Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden transition transform hover:scale-105">
-              <img src={project.image} alt={project.title} className="w-full h-48 object-cover"/>
-              <div className="p-4">
-                <h3 className="text-xl font-semibold">{project.title}</h3>
-                <p className="mt-2 text-gray-600">{project.description}</p>
-              </div>
+                {/* Repeat for other projects */}
             </div>
-          ))}
         </div>
-      </div>
-    </section>
-  );
+    );
 };
 
 export default Projects;
+
+
+
+  
