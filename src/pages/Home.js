@@ -12,7 +12,7 @@ const Home = () => {
                     A showcase of my best work and projects
                 </p>
                 <a
-                    href="#projects"
+                    href="/projects"
                     className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-6 rounded-full text-lg font-medium transition duration-300 animate-bounce"
                 >
                     View My Work
